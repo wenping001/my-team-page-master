@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  /* padding: 2rem 1.4rem; */
+}
+
+h2 {
+  font-family: 'PT Serif', serif;
+  font-size: 2.25rem;
+}
+
+header {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  margin-bottom: 1.8rem;
+}
+
+@media screen and (max-width: 675px) {
+  header {
+    width: 90%;
+  }
+}
+.introduction {
+  width: 300px;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+@media screen and (max-witth: 675px) {
+  .introduction {
+    font-size: 0.75rem;
+  }
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 675px) {
+  main {
+    width: 90%;
+  }
+}
+.members {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(2, 600px);
+}
+
+@media screen and (max-width: 675px) {
+  .members {
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(3, 280px);
+    gap: 0 1rem;
+  }
+}
+.member-wrapper {
+  display: flex;
+}
+
+.member:nth-child(2),
+.member:nth-child(5) {
+  align-self: end;
+}
+
+@media screen and (max-width: 675px) {
+  .member:nth-child(5) {
+    align-self: start;
+  }
+
+  .member:nth-child(even) {
+    align-self: end;
+  }
+}
+
+.member-picture {
+  display: block;
+  width: 258px;
+  height: 400px;
+}
+
+@media screen and (max-width: 675px) {
+  .member-picture {
+    width: 130px;
+    height: 200px;
+  }
+}
+
+.member-position {
+  font-family: 'PT Serif', serif;
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 0.75rem;
+  font-style: normal;
+  padding-left: 0.3rem;
+  letter-spacing: 1px;
+}
+
+.member-name {
+  font-size: 1.125rem;
+  padding-top: 1rem;
+}
+
+@media screen and (max-width: 675px) {
+  .member-position {
+    font-size: 0.625rem;
+  }
+  .member-name {
+    font-size: 0.75rem;
+    padding-top: 0.2rem;
+  }
+}
+
+footer {
+  color: #a9a9a9;
+  text-align: center;
+  margin-top: 3rem;
+}
+footer a {
+  font-weight: bolder;
+}
